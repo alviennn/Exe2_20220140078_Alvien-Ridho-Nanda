@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Body */
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #d4f152;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+/* Container */
+.container {
+    margin-top: 50px;
+}
+
+/* Title */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.album-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+}
+
+.store-description {
+    background-color: #c89b9e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.store-description h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.store-description p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}

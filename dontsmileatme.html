@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Smile at Me - Album Description</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="dontsmileatme.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://pnghq.com/wp-content/uploads/pnghq.com-billie-eilish-logo-black-transparent-png-1024x644.png" alt="Billie Eilish Logo" style="max-height: 40px;">
+            Billie Eilish Albums
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="mainmenu.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="albums.html">Albums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="spotify.html">Spotify</a>
+                </li>
+            </ul>
+            <div id="time" class="navbar-text mx-3">Loading time...</div>
+            <div id="greeting" class="navbar-text">Loading greeting...</div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Don't Smile at Me</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://i.pinimg.com/564x/11/c6/d3/11c6d3589f1e50170bfa52c5674b1317.jpg" class="card-img-top album-cover" alt="Album 3">
+            </div>
+            <div class="col-md-6">
+                <h3>Description:</h3>
+                <p>Don't Smile at Me is the debut extended play by American singer-songwriter Billie Eilish. It was released on August 11, 2017, through Darkroom and Interscope Records. The EP was re-released on August 10, 2018. The EP includes the single "Ocean Eyes," which was released in November 2016.</p>
+                <h3>Tracks:</h3>
+                <ol>
+                    <li>Copycat</li>
+                    <li>Idontwannabeyouanymore</li>
+                    <li>My Boy</li>
+                    <li>Watch</li>
+                    <li>Party Favor</li>
+                    <li>Bellyache</li>
+                    <li>Ocean Eyes</li>
+                    <li>Hostage</li>
+                    <li>&burn</li>
+                </ol>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="albums.html" class="btn btn-secondary">Back to Menu</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>EXERCISE 2 - 20220140078</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/alvienn__"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/user/psuz9sr1uqoxaj10t7zl93r0h?si=426017bb526a448e"><i class="fab fa-spotify"></i></a>
+                <a href="https://github.com/alviennn"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function displayGreeting() {
+            var date = new Date();
+            var hour = date.getHours();
+            var greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Good morning";
+            } else if (hour >= 12 && hour < 16) {
+                greeting = "Good afternoon";
+            } else if (hour >= 16 && hour < 19) {
+                greeting = "Good evening";
+            } else {
+                greeting = "Good night";
+            }
+
+            document.getElementById("greeting").innerText = greeting;
+            document.getElementById("time").innerText = date.toLocaleTimeString();
+        }
+
+        displayGreeting();
+        setInterval(displayGreeting, 1000); 
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

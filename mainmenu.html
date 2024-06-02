@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billie Eilish Album Store</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="mainmenu.css" rel="stylesheet">
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="https://pnghq.com/wp-content/uploads/pnghq.com-billie-eilish-logo-black-transparent-png-1024x644.png" alt="Billie Eilish Logo" style="max-height: 40px;">
+        Billie Eilish Albums
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="mainmenu.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="albums.html">Albums</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="spotify.html">Spotify</a>
+            </li>
+        </ul>
+        <div id="time" class="navbar-text mx-3">Loading time...</div>
+        <div id="greeting" class="navbar-text">Loading greeting...</div>
+    </div>
+</nav>
+
+    <div class="container mt-5">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://i.pinimg.com/736x/ef/cb/54/efcb54fdc5cc0cb42136174297862722.jpg" alt="Album 1">
+            </div>
+
+            <div class="mySlides">
+                <img src="https://i.pinimg.com/736x/0b/89/c4/0b89c488bd6c54a1fa7d46bc3b5e9559.jpg" alt="Album 2">
+            </div>
+
+            <div class="mySlides">
+                <img src="https://i.pinimg.com/736x/5c/45/0f/5c450f055bf39776219c37586e908dc9.jpg" alt="Album 3">
+            </div>
+
+            <div class="mySlides">
+                <img src="https://i.pinimg.com/564x/a2/ab/0e/a2ab0eb0446ef4372b86edcd20cbb639.jpg" alt="Album 4">
+            </div>
+        </div>
+
+        <div class="store-description">
+            <h1 class="text-center mb-4">Welcome To Billie Eilish Album Store</h1>
+            <p>Discover the complete collection of albums by Billie Eilish. From her debut EP "Don't Smile at Me" to her latest studio album "Happier Than Ever," we have all of Billie Eilish's music available for purchase.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <p>EXERCISE 2 - 20220140078</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/alvienn__"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/user/psuz9sr1uqoxaj10t7zl93r0h?si=426017bb526a448e"><i class="fab fa-spotify"></i></a>
+                <a href="https://github.com/alviennn"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length - 1) {slideIndex = 0}
+            slides[slideIndex].style.display = "block";
+            setTimeout(showSlides, 2000); 
+        }
+
+        function displayGreeting() {
+            var date = new Date();
+            var hour = date.getHours();
+            var greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Good morning";
+            } else if (hour >= 12 && hour < 16) {
+                greeting = "Good afternoon";
+            } else if (hour >= 16 && hour < 19) {
+                greeting = "Good evening";
+            } else {
+                greeting = "Good night";
+            }
+
+            document.getElementById("greeting").innerText = greeting;
+            document.getElementById("time").innerText = date.toLocaleTimeString();
+        }
+
+        displayGreeting();
+        setInterval(displayGreeting, 1000); 
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

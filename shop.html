@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Shop</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Album Shop */
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #d4f152;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #c89b9e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.navbar {
+    background-color: #343a40 !important;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-text {
+    font-size: 16px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://pnghq.com/wp-content/uploads/pnghq.com-billie-eilish-logo-black-transparent-png-1024x644.png" alt="Billie Eilish Logo" style="max-height: 40px;">
+            Billie Eilish Albums
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="mainmenu.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="albums.html">Albums</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="spotify.html">Spotify</a>
+                </li>
+            </ul>
+            <div id="time" class="navbar-text mx-3">Loading time...</div>
+            <div id="greeting" class="navbar-text">Loading greeting...</div>
+        </div>
+    </nav>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Order Your Album</h1>
+    <form id="orderForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number:</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="album">Select Album:</label>
+            <select class="form-control" id="album" name="album" required>
+                <option value="">Select Album</option>
+                <option value="Happier Than Ever">Happier Than Ever</option>
+                <option value="Hit Me Hard and Soft">Hit Me Hard and Soft</option>
+                <option value="dont smile at me">dont smile at me</option>
+                <option value="WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?">WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?</option>
+            </select>
+            <small class="form-text text-muted">All price $50.</small>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<footer class="footer">
+    <div class="container-footer">
+        <p>EXERCISE 2 - 20220140078</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/alvienn__"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/user/psuz9sr1uqoxaj10t7zl93r0h?si=426017bb526a448e"><i class="fab fa-spotify"></i></a>
+            <a href="https://github.com/alviennn"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#orderForm").submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form data
+                var formData = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    address: $("#address").val(),
+                    phone: $("#phone").val(),
+                    album: $("#album").val(),
+                    quantity: $("#quantity").val()
+                };
+
+                // Display alert with form data
+                var totalPrice = formData.quantity * 50; // Assuming $50 per album
+                var date = new Date().toLocaleDateString();
+                var message = "Thank you for your order!\n\n";
+                message += date + "\n ";
+                message += "Name: " + formData.name + "\n";
+                message += "Email: " + formData.email + "\n";
+                message += "Address: " + formData.address + "\n";
+                message += "Phone: " + formData.phone + "\n";
+                message += "Album: " + formData.album + "\n";
+                message += "Quantity: " + formData.quantity + "\n";
+                message += "Total Price: $" + totalPrice.toFixed(2) + "\n"; // Display total price with 2 decimal places
+                alert(message);
+            });
+        });
+
+        function displayGreeting() {
+            var date = new Date();
+            var hour = date.getHours();
+            var greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Good morning";
+            } else if (hour >= 12 && hour < 16) {
+                greeting = "Good afternoon";
+            } else if (hour >= 16 && hour < 19) {
+                greeting = "Good evening";
+            } else {
+                greeting = "Good night";
+            }
+
+            document.getElementById("greeting").innerText = greeting;
+            document.getElementById("time").innerText = date.toLocaleTimeString();
+        }
+
+        displayGreeting();
+        setInterval(displayGreeting, 1000);
+    </script>
+</body>
+</html>
+
